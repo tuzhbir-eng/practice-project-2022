@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
+import { PiHandshakeFill } from 'react-icons/pi';
 import Header from '../../components/Header/Header';
 import CONSTANTS from '../../constants';
 import SlideBar from '../../components/SlideBar/SlideBar';
@@ -8,6 +9,10 @@ import Footer from '../../components/Footer/Footer';
 import styles from './Home.module.sass';
 import carouselConstants from '../../carouselConstants';
 import Spinner from '../../components/Spinner/Spinner';
+import handshake from './handshake.png';
+import crowd from './crowd.png';
+import pieChart from './pie-chart.png';
+import megaphone from './megaphone.png';
 
 const Home = props => {
   const [index, setIndex] = useState(0);
@@ -55,6 +60,73 @@ const Home = props => {
                 </Link>
               </div>
             </div>
+
+            <div className={styles.atomComponent}>
+              <div className={styles.atomTop}>
+                <h3 className={styles.atomTitle}>
+                  Like A Naming Agency, But Better
+                </h3>
+                <p className={styles.atomTopText}>
+                  With Atom's managed contests, leverage our team's naming
+                  expertise and our pool of 300K+ naming experts. Our
+                  hybrid-solution partners you with a trained Atom branding
+                  consultant who will guide your crowdsourcing process
+                  step-by-step to get the best results possible.
+                </p>
+              </div>
+              <ul className={styles.atomList}>
+                <li className={styles.atomListItem}>
+                  <img
+                    className={styles.atomListIcon}
+                    src={handshake}
+                    alt='handShake'
+                  />
+                  <h4 className={styles.atomListTitle}>Consultant Led</h4>
+                  <p className={styles.atomTopText}>
+                    Work one-on-one with a Atom branding consultant.
+                  </p>
+                </li>
+                <li className={styles.atomListItem}>
+                  <img
+                    className={styles.atomListIcon}
+                    src={pieChart}
+                    alt='pieChart'
+                  />
+                  <h4 className={styles.atomListTitle}>Crowd Powered</h4>
+                  <p className={styles.atomTopText}>
+                    Work with our top rated Creatives and receive a huge breadth
+                    of ideas
+                  </p>
+                </li>
+
+                <li className={styles.atomListItem}>
+                  <img
+                    className={styles.atomListIcon}
+                    src={crowd}
+                    alt='crowd'
+                  />
+                  <h4 className={styles.atomListTitle}>Trademark Reports</h4>
+                  <p className={styles.atomTopText}>
+                    Comprehensive trademark screening on your shortlisted names.
+                  </p>
+                </li>
+
+                <li className={styles.atomListItem}>
+                  <img
+                    className={styles.atomListIcon}
+                    src={megaphone}
+                    alt='megaphone'
+                  />
+                  <h4 className={styles.atomListTitle}>Audience Testing</h4>
+                  <p className={styles.atomTopText}>
+                    Get rapid feedback from real people on your shortlist of
+                    business names.
+                  </p>
+                </li>
+              </ul>
+              <button className={styles.atomBtn}>Learn More</button>
+            </div>
+
             <div className={styles.greyContainer}>
               <SlideBar
                 images={carouselConstants.mainSliderImages}
@@ -107,6 +179,7 @@ const Home = props => {
                 </div>
               </div>
             </div>
+
             <div className={styles.greyContainer}>
               <div className={styles.adv}>
                 <div className={styles.images}>
